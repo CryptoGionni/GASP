@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="info">
+    <meta name="keywords" content="party">
+    <meta name="author" content="gio">
+
+    <title>
+      
+        GASP! &middot; 2023
+      
+    </title>
+
+    
+      <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+      <link href="docs/assets/css/toolkit-minimal.css" rel="stylesheet">
+      <link href="docs/assets/css/application-minimal.css" rel="stylesheet">
+    
+
+        <link rel="apple-touch-icon" sizes="57x57" href="docs/assets/img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="docs/assets/img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="docs/assets/img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="docs/assets/img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="docs/assets/img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="docs/assets/img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="docs/assets/img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="docs/assets/img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="docs/assets/img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="docs/assets/img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="docs/assets/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="docs/assets/img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="docs/assets/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="docs/assets/img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="docs/assets/img/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+    
+
+    <style>
+      /*  
+      sfondo: azz: rgb(182, 211, 231);
+          scritte: oro
+          azzurro, 
+          simil teal: rgb(103, 160, 160)
+      */
+      :root{
+        --azz: #b6d3e7;
+        --gold: #8b752f;
+        --simteal: rgb(103, 160, 160);
+        
+      }
+      .block {
+        position: relative;
+        width: 100%;
+        padding: 60px 30px;
+        color: inherit;
+        /* sfondo */
+        background-color: var(--azz);
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+      .container{
+        /* sfondo */
+            background-color: var(--azz);
+
+        }
+      p, h1, span, li{
+        color: var(--gold);
+        }
+      body {
+        /* sfondo */
+          background-color: var(--azz);
+        }
+      .faq {
+          list-style: none;
+        }
+      .faq::before {
+          content: "\2022";
+          /* testo */
+          color: var(--gold);
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em;
+          margin-left: -1em;
+        }
+        ul strong{
+          color: var(--gold);
+        }
+
+      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          width: 1px;
+          min-width: 100%;
+          *width: 100%;
+        /* sfondo */
+          background-color: var(--azz);
+        }
+        #stage {
+          height: 1px;
+          overflow: auto;
+          min-height: 100vh;
+          -webkit-overflow-scrolling: touch;
+        }
+        #status{
+          width: 50%;
+        }
+        #gif{
+          margin-left: -50%;
+          width: "340";
+          height: "235";
+        }
+        #gifCannon{
+          margin-left: -30%;
+        }
+        #title{
+          padding-bottom: 10%;
+        }
+      }
+    </style>
+  </head>
+
+
+<body>
+  
+
+
+<!-- navbar -->
+<div class="container pt-4">
+  <div class="navbar navbar-light navbar-static-top mb-5 text-xs-center">
+    
+    <button style="color: var(--gold); background-color: #ffffff;"
+      class="navbar-toggler navbar-toggler-right hidden-md-up"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+
+      <span id="status" style="font-family: sans-serif">Ultimo aggiornamento del sito il
+        7/12/22
+        alle
+        20:18
+      </span>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="nav navbar-nav ml-auto" style="color: var(--gold); background-color: #ffffff;">
+        <li class="nav-item ">
+          <a class="nav-link" href="#4-info"><strong>info</strong></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#pricing"><strong>prezzi</strong></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#FAQ"><strong>FAQ</strong></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="#FAQ"><strong>chi siamo</strong></a>
+        </li>
+      </ul>
+    </div>
+
+    </div>
+</div> 
+
+
+<!-- titolo  -->
+<div class="block ">
+  <div class="container text-xs-center">
+    <h1 class="mb-0 text-uppercase app-myphone-brand">
+      
+    <img id='title' class="img-fluid" src="docs/assets/img/title.png">
+    <br>
+    <strong>Addio 2022 e grazie per tutto il pesce</strong></h1>
+    <p class="lead mb-5 pb-5 text-uppercase"></p>
+    <br>
+    <iframe id="gif" src="https://giphy.com/embed/FWcoE5AkG3BRe" width="630" height="340" frameBorder="0" 
+    class="giphy-embed" allowFullScreen></iframe>
+  </div>
+</div>
+
+
+<!-- un po di dati generali-->
+<div class="block block-bordered-lg pb-0 app-block-stats">
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-lg-5 col-md-6 text-center text-md-left pb-5">
+        
+        <p class="lead">
+          Questo party lo abbiamo fatto "fatto" ;)
+        </p>
+
+        <div class="row my-4">
+
+          <div class="col-6 mb-3">
+            <div class="statcard">
+              <h1 class="statcard-number block-title">&infin;</h1>
+              <span class="statcard-desc">drink al bar illimitati inclusi con l'ingresso</span>
+            </div>
+          </div>
+
+          <div class="col-6 mb-3">
+            <div class="statcard">
+              <h1 class="statcard-number block-title"><b>5x</b></h1>
+              <span class="statcard-desc">Alcol (dall'ultima festa)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mb-3 ">
+
+          <div class="col-6 mb-3">
+            <div class="statcard">
+              <h1 class="statcard-number block-title"><b>+200</b></h1>
+              <span class="statcard-desc">Brani disco remixati</span>
+            </div>
+          </div>
+
+          <div class="col-6 mb-3">
+            <div class="statcard">
+              <h1 class="statcard-number block-title"><b>tanti</b></h1>
+              <span class="statcard-desc">giochi per tutta la notte</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      
+      <div class="col-lg-7 col-md-5">
+        <img
+          src="docs/assets/img/meme.jpg"
+          class="app-translate-5"
+          data-transition="entrance">
+        <hr class="mt-0 mb-5 mx-auto hidden-md-up">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- contatti https://www.instagram.com/de_cenzybus/-->
+<div class="block block-bordered-lg text-center">
+  <div class="container-fluid">
+
+    <p class="lead mb-4">
+      Perchè? Semplicemente ci piacciono le feste!
+      <br>
+      <strong>Prenota</strong> il tuo posto :)
+    </p>
+
+    <form class="form-inline d-flex justify-content-center">
+      <!-- <button class="btn btn-primary mb-3">Get started</button> -->
+      <a class="btn btn-primary mb-3" href="https://www.instagram.com/de_cenzybus/">Contattaci</a>
+    </form>
+
+    <!-- <small class="text-muted">
+      By clicking "Get started" I agree to Mochi's
+      <a href="#">Terms of service</a>
+    </small> -->
+  </div>
+</div>
+
+
+<!-- meme-->
+<div class="block block-bordered-lg pb-0 app-block-stats">
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-sm-2 col-sm-6" style="padding-bottom: 7%;">
+        <iframe id='gifCannon' src="https://giphy.com/embed/l4j8dtWBHDPiR8o30q" width="480" height="240" frameBorder="0" class="giphy-embed" 
+        allowFullScreen></iframe>
+
+        <!-- <hr class="mt-0 mb-5 mx-auto hidden-md-up"> -->
+      </div>
+
+      <div class="col-lg-5 col-md-6 text-center text-md-left pb-5">
+        
+        <p class="lead">
+          <!-- E' il nostro 4° party e lo abbiamo fatto esagerato -->
+            
+          <div class=" text-xs-center">
+            <h1 class=" text-uppercase">
+              <br>
+              <strong>10€ bevi all'infinito</strong></h1>
+            <span class=" text-uppercase">(a napoli spenderesti il doppio per ballare sobri!)</span>
+            
+            <!-- <img class="img-fluid" src="docs/assets/img/template-min.png"> -->
+          </div>
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 4 info fondamentali con 4 icone -->
+<div class="block block-bordered-lg" id="4-info">
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-8 offset-sm-2 text-center mb-5">
+      <p class="lead mx-auto">Il veglione <strong>scostumato</strong>: </p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="featured-list">
+          <li class="mb-5">
+            <div class="featured-list-icon text-primary">
+              <span class="icon icon-hour-glass"></span>
+            </div>
+            <p class="featured-list-icon-text mb-0"><strong>Quando</strong></p>
+            <p class="featured-list-icon-text">
+              Domenica 1 Gennaio 2023
+              <br>
+              Starting 02:00
+            </p>
+          </li>
+
+          <li class="mb-5">
+            <div class="featured-list-icon text-primary">
+              <span class="icon icon-image"></span>
+            </div>
+            <p class="featured-list-icon-text mb-0"><strong>Dove</strong></p>
+            <p class="featured-list-icon-text">
+              <a href="https://goo.gl/maps/JxyZasgDyFS7TNfWA">Via Iazzetta 89</a>, Casalnuovo di Napoli, 80013
+              <br>
+              Riferimenti: vicino al Magic Vision, McDonand's di Pomigliano
+            </p>
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <ul class="featured-list">
+
+          <li class="mb-5">
+            <div class="featured-list-icon text-primary">
+              <span class="icon icon-cloud"></span>
+            </div>
+            <p class="featured-list-icon-text mb-0"><strong>Quanto</strong></p>
+            <p class="featured-list-icon-text">
+              10€: scorri più giù per capire cosa include
+              <br>
+            </p>
+          </li>
+
+          <li class="mb-5">
+            <div class="featured-list-icon text-primary">
+              <span class="icon icon-check"></span>
+            </div>
+            <p class="featured-list-icon-text mb-0"><strong>Dress-code</strong></p>
+            <p class="featured-list-icon-text">
+              total white ;)
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- festa 2021  -->
+<!-- <div class="block ">
+    <div class="container text-xs-center">
+      <p class="lead mb-5 pb-5 text-uppercase">come è stato
+        <a href="https://www.instagram.com/stories/highlights/17906209604247063/">l'anno scorso</a>
+          ?</p>
+      <img class="img-fluid" src="docs/assets/img/hw_2021.jpg">
+    </div>
+</div> -->
+
+
+<!-- carusel scorrevole, mettici le quotes -->
+<div class="block block-bordered-lg pl-0 pt-0 pr-0">
+  <div id="carousel-example-generic" class="carousel carousel-light slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+
+      <div class="carousel-item active">
+        <!-- quote -->
+        <div class="block block-bordered-lg">
+          <div class="container text-center app-translate-15" data-transition="entrance">
+            <blockquote class="pull-quote">
+              <img class="rounded-circle" src="docs/assets/img/girl.JPG">
+              <p>"I barman erano simpatici, si dovrebbe fare più spesso una festa del genere a Casalnuovo, perchè è comodo stare vicino casa quando sei ubriaca"                
+              </p>
+              <cite>Anoninma, Halloween 2021</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- quote -->
+        <div class="block block-bordered-lg">
+          <div class="container text-center app-translate-15" data-transition="entrance">
+            <blockquote class="pull-quote">
+              <img class="rounded-circle" src="docs/assets/img/man.JPG">
+              <p>"Ben organizzato" (tradotto dal napoletano: 'avit buon')</p>
+              <cite>Anonimo, Halloween 2021</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- quote -->
+        <div class="block block-bordered-lg">
+          <div class="container text-center app-translate-15" data-transition="entrance">
+            <blockquote class="pull-quote">
+              <img class="rounded-circle" src="docs/assets/img/girl.JPG">
+              <p>"Mi sono divertita un sacco" (tradotto dal napoletano: 'e vir tu, magg fatt na dij e magnat')
+              </p>
+              <cite>Anonima, Capodanno 2021</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="icon icon-chevron-thin-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="icon icon-chevron-thin-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+<!-- un po di dati generali-->
+<div class="block block-bordered-lg pb-0 app-block-stats">
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-lg-5 col-md-6 text-center text-md-left pb-5">
+        
+        <p class="lead">
+            
+          <div class=" text-xs-center">
+            <h1 class=" text-uppercase"><strong>prenota il tuo ingresso</strong></h1>
+            <span class=" text-uppercase">entro il 25 Dicembre 2022</span>
+            
+          </div>
+        </p>
+      </div>
+
+      
+      <div class="col-sm-2 col-sm-6">
+        <img
+          src="docs/assets/img/InkedtemplateGASP.jpg"
+          class="app-translate-5"
+          data-transition="entrance">
+        <hr class="mt-0 mb-5 mx-auto hidden-md-up">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- pricing biglietti -->
+<div class="container" id="pricing">
+
+ <div class="row mb-4">
+
+ </div>
+
+ <div class="row">
+
+   <div class="col-lg-12" style="padding-bottom: 5%;">
+     <div class="card" >
+       <div class="card-block">
+
+         <h3 class="card-title">Standard</h3>
+
+         <h4 class="text-muted text-serif mt-0 mb-3">
+           <em>10€</em>
+         </h4>
+
+         <hr>
+
+         <ul class="iconlist text-serif mb-4">
+           <li class="">
+             <span class="icon icon-check"></span>
+             <em>Ingresso con QR-code</em>
+           </li>
+           <li class="">
+              <span class="icon icon-check"></span>
+              <em>Giochi della serata</em>
+            </li>
+           <li>
+             <span class="icon icon-check"></span>
+             <em>Free Bar: drink illimitati, si... non paghi dopo il primo drink, nè doppo il secondo nè dopo ancora</em>
+           </li>
+
+         </ul>
+       </div>
+     </div>
+   </div>
+
+ </div>
+
+
+</div>
+
+
+
+<!-- contatti https://www.instagram.com/de_cenzybus/-->
+<div class="block block-bordered-lg text-center">
+  <div class="container-fluid">
+
+    <p class="lead mb-4">
+      Unisciti ora, abbiamo posti <strong>limitati</strong>!
+    </p>
+
+    <form class="form-inline d-flex justify-content-center">
+      <!-- <button class="btn btn-primary mb-3">Get started</button> -->
+      <a class="btn btn-primary mb-3" href="https://www.instagram.com/de_cenzybus/">Contattaci</a>
+    </form>
+
+    <!-- <small class="text-muted">
+      By clicking "Get started" I agree to Mochi's
+      <a href="#">Terms of service</a>
+    </small> -->
+  </div>
+</div>
+
+
+<!-- footer -->
+<div class="block app-block-footer">
+  <div class="container" id="FAQ">
+
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2 text-center mb-5">
+        <p class="lead mx-auto"><strong>FAQ</strong>: domande frequenti</p>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 mb-4">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">cosa c'è alle nostre feste?</strong>
+          <li class="faq" >Disco: DJ set con musica a tema</li>
+          <li class="faq" >FREE BAR: drink infiniti per tutti</li>
+          <li class="faq" >Giochi di gruppo e da tavolo</li>
+          <li class="faq" >Fotografo ufficiale</li>
+          <!-- <li class="faq" >Security</li> -->
+          <li class="faq" >Stuzzicherie a tema</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 mb-4">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">a cosa serve il Qr-code?</strong>
+          <li class="faq" >Ti servirà per scannerizzalo all'ingresso, è un codice univoco: non perderlo! Conservalo nella tua galleria.</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 mb-4">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">C'è il servizio navetta?</strong>
+          <li class="faq" >Si! 
+            <a class="" href="https://www.instagram.com/de_cenzybus/">Contattaci</a> 
+            e organizzaeremo tutto in modo smart. (Il servizio navetta non è incluso con l'ingresso )</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 mb-4">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">dove parcheggiare?</strong>
+          <li class="faq" >Lungo 
+            <a href="https://goo.gl/maps/JxyZasgDyFS7TNfWA">Via Iazzetta</a>
+            si può lasciare l'auto, ma anche fuori al Magic Vision, non sarebbe lontano</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 mb-4">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">E' una serata 18+?</strong>
+          <li class="faq" >No!</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 mb-4">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">come acquistare l'ingresso?</strong>
+        <li class="faq" >
+            1) <a class="" href="https://www.instagram.com/de_cenzybus/">Contattaci</a> 
+        </li>
+            <li class="faq" >
+            2) Organizziamo un appuntamento per raccogliere le quote giorni prima della festa, 
+            così non dovrai portarli con te quella sera! Tanto è Free Bar ;)
+        </li>
+        <li class="faq" >
+            3) Al pagamento ti consegneremo il QR-code per accedere alla festa
+        </li>
+        <li class="faq" >
+            4) Divertiti
+        </li>
+        </ul>
+      </div>
+
+       <div class="col-sm-4" style="color: var(--gold);">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">come lasciare la festa senza che gli altri se ne accorgano?</strong>
+          <li class="faq" >Tutorial: the office S8 E12</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4" style="color: var(--gold);">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">vuoi organizzare uno scherzo agli amici che porti alla festa?</strong>
+          <li class="faq" ><a class="" href="https://www.instagram.com/de_cenzybus/">Contattaci</a>  che saremo lieti di essere complici ;)</li>
+        </ul>
+      </div>
+      
+      <div class="col-sm-4" style="color: var(--gold);">
+        <ul class="list-unstyled list-spaced">
+          <strong class="text-uppercase">chi siamo?</strong>
+          <li class="faq" >Siamo solo degli universitari a cui piacciono le feste p' parià</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+
+
+    <script src="docs/assets/js/jquery.min.js"></script>
+    <script src="docs/assets/js/tether.min.js"></script>
+    <script src="docs/assets/js/toolkit.js"></script>
+    <script src="docs/assets/js/application.js"></script>
+  </body>
+</html>
+
