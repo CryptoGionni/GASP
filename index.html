@@ -132,7 +132,7 @@
   </head>
 
 
-<body>
+<body onload='initialRead()'>
   
 
 
@@ -391,16 +391,6 @@
   </div>
 </div>
 
-<!-- festa 2021  -->
-<!-- <div class="block ">
-    <div class="container text-xs-center">
-      <p class="lead mb-5 pb-5 text-uppercase">come è stato
-        <a href="https://www.instagram.com/stories/highlights/17906209604247063/">l'anno scorso</a>
-          ?</p>
-      <img class="img-fluid" src="docs/assets/img/hw_2021.jpg">
-    </div>
-</div> -->
-
 
 <!-- carusel scorrevole, mettici le quotes -->
 <div class="block block-bordered-lg pl-0 pt-0 pr-0">
@@ -526,7 +516,7 @@
          <h3 class="card-title">Biglietto Scostumato Standard</h3>
 
          <h4 class="text-muted text-serif mt-0 mb-3">
-           <em>12€*</em>
+           <em>12€</em>
          </h4>
 
          <hr>
@@ -565,8 +555,38 @@
 
 
 
+<!-- counter JSON  -->
+      <div class="block block-bordered-lg text-center">
+        <div class="container-fluid">
+      
+          <p class="lead mb-4">
+            Pensi di venirci? faccelo sapere con una <strong>like</strong> a forma di testa di isola di Pasqua &#128511;!
+          </p>
+      
+          <p>Partecipanti: 
+            <span id="counterPartecipanti" ></span>
+          </p>
 
-<!-- meme-->
+
+          <div class="form-inline d-flex justify-content-center">
+            <!-- <button class="btn btn-primary mb-3">Get started</button> -->
+            <button class="btn btn-primary mb-3" onclick='updatePartecipanti()'>like &#128511;</button>
+          </div>
+      
+          <!-- <small class="text-muted">
+            By clicking "Get started" I agree to Mochi's
+            <a href="#">Terms of service</a>
+          </small> -->
+        </div>
+      </div>
+
+
+
+
+
+
+
+<!-- game-->
 <div class="block block-bordered-lg pb-0 app-block-stats">
   <div class="container">
     <div class="row">
@@ -765,6 +785,100 @@
     <script src="docs/assets/js/tether.min.js"></script>
     <script src="docs/assets/js/toolkit.js"></script>
     <script src="docs/assets/js/application.js"></script>
+    
+    <script>
+              
+        const binID = '639da25315ab31599e1e9228'
+        const APIkey = '$2b$10$0lIjtL1PFHpXsLROKTMsmuUMxBDrH4Qi7eMNCJkr04kv2mUfEGwfu'
+
+        let read = new XMLHttpRequest();
+        let req = new XMLHttpRequest();
+
+        //****************************************legge online
+        function leggi() {
+          var myArr = [];
+
+          read.onreadystatechange = () => {
+            if (read.readyState == XMLHttpRequest.DONE) {
+              //console.log(req.responseText);
+              myArr = JSON.parse(read.responseText);
+              //contatoreJson = myArr.record.minorenni;
+              //console.log("ho letto");
+              
+            }
+          };
+          
+          read.open("GET", "https://api.jsonbin.io/v3/b/" + binID + "/latest", false);
+          read.setRequestHeader("X-Master-Key", APIkey);
+          read.send();
+
+          return myArr;
+        }
+
+
+        //**************************************** riempie il counter ccon l'ultimo dato salvato
+        function initialRead() {
+          var myArr = [];
+
+          read.onreadystatechange = () => {
+            if (read.readyState == XMLHttpRequest.DONE) {
+              //console.log(req.responseText);
+              myArr = JSON.parse(read.responseText);
+              //contatoreJson = myArr.record.minorenni;
+              //console.log("ho letto");
+              
+            }
+          };
+          
+          read.open("GET", "https://api.jsonbin.io/v3/b/" + binID + "/latest", false);
+          read.setRequestHeader("X-Master-Key", APIkey);
+          read.send();
+          
+          //console.log(myArr.record.partecipanti);
+          document.getElementById("counterPartecipanti").innerHTML = myArr.record.partecipanti;
+
+          return myArr;
+        }
+
+
+        //****************************************scrive online
+        function scrivi(counterUP) {
+
+
+          req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+              //console.log("scrivo");
+            }
+          };
+
+
+          req.open("PUT", "https://api.jsonbin.io/v3/b/" + binID, false);
+          req.setRequestHeader("Content-Type", "application/json");
+          req.setRequestHeader("X-Master-Key", APIkey);
+          req.send(
+            '{"partecipanti":' + counterUP.record.partecipanti + '}');
+
+        }
+
+
+        //****************************************mostra l'update
+        function updatePartecipanti(){
+
+          counter = leggi();
+
+          //console.log("aggiorno maggiorenni");
+          counter.record.partecipanti = counter.record.partecipanti + 1;	//aggiorna il counter per il prossimo link
+          
+          document.getElementById("counterPartecipanti").innerHTML = counter.record.partecipanti;
+
+          scrivi(counter);
+
+        }
+
+
+    </script>
+
+
   </body>
 </html>
 
